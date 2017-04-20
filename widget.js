@@ -30,6 +30,10 @@
             return validator[method].apply(validator, slice.call(arguments, 1));
           });
         });
+
+        me.on("finalize", function() {
+          validator.destroy();
+        });
       }
     });
 });
