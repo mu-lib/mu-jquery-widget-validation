@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/mu-lib/mu-jquery-widget-validation/compare/v1.0.0...v2.0.0) (2017-05-13)
+
+
+### Bug Fixes
+
+* remove $.fn methods from widget ([fbd2d68](https://github.com/mu-lib/mu-jquery-widget-validation/commit/fbd2d68))
+
+
+### BREAKING CHANGES
+
+* all valid/validate/rules have been removed from widget in liue of having them on $.fn
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/mu-lib/mu-jquery-widget-validation/compare/v0.0.2...v1.0.0) (2017-05-13)
 
