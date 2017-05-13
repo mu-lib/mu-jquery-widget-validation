@@ -10,30 +10,23 @@
     }));
   }
 })(["mu-jquery-widget/widget"], function (widget) {
-  var slice = Array.prototype.slice;
+  return widget.extend({
+    "on/initialize": function ($event) {
+      var me = this;
+      var $element = me.$element;
+      var validator = $element.validate($element.data("mu-jquery-widget-validation"));
 
-  return widget.extend(["valid", "validate", "rules"].map(function (method) {
-    return {
-      "key": "on/validation/" + method,
-      "value": function () {
-        return this.$.fn[method].apply(this.$element, slice.call(arguments, 1));
-      }
-    };
-  }), {
-      "on/initialize": function ($event) {
-        var me = this;
-        var $element = me.$element;
-        var validator = $element.validate($element.data("muJqueryWidgetValidation"));
+      ["form", "element", "resetForm", "showErrors", "numberOfInvalids"].forEach(function (method) {
+        me[me[method] ? method + "$validation" : method] = $.proxy(validator[method], validator);
+      });
 
-        [ "form", "element", "resetForm", "showErrors", "numberOfInvalids" ].forEach(function(method) {
-          me.on("validation/" + method, function() {
-            return validator[method].apply(validator, slice.call(arguments, 1));
-          });
-        });
+      ["valid", "validate", "rules"].forEach(function (method) {
+        me[me[method] ? method + "$validation" : method] = $.proxy($element[method], $element);
+      });
 
-        me.on("finalize", function() {
-          validator.destroy();
-        });
-      }
-    });
+      me.on("finalize", function () {
+        validator.destroy();
+      });
+    }
+  });
 });
