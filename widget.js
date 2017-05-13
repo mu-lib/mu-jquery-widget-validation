@@ -20,10 +20,6 @@
         me[me[method] ? method + "$validation" : method] = $.proxy(validator[method], validator);
       });
 
-      ["valid", "validate", "rules"].forEach(function (method) {
-        me[me[method] ? method + "$validation" : method] = $.proxy($element[method], $element);
-      });
-
       me.on("finalize", function () {
         validator.destroy();
       });
