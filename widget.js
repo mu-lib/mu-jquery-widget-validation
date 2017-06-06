@@ -16,7 +16,7 @@
       var $element = me.$element;
       var validator = $element.validate($element.data("mu-jquery-widget-validation"));
 
-      ["form", "element", "resetForm", "showErrors", "numberOfInvalids"].forEach(function (method) {
+      ["form", "check", "element", "resetForm", "showErrors", "numberOfInvalids"].forEach(function (method) {
         me[me[method] ? method + "$validation" : method] = $.proxy(validator[method], validator);
       });
 
