@@ -20,6 +20,10 @@
         me[me[method] ? method + "$validation" : method] = $.proxy(validator[method], validator);
       });
 
+      me.validator = function() {
+        return validator;
+      }
+
       me.on("finalize", function () {
         validator.destroy();
       });
