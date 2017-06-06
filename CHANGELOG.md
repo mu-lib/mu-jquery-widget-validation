@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/mu-lib/mu-jquery-widget-validation/compare/v2.0.0...v2.1.0) (2017-06-06)
+
+
+### Features
+
+* expose validator on widget ([bc7e991](https://github.com/mu-lib/mu-jquery-widget-validation/commit/bc7e991))
+* proxy validator.check on widget ([eb88410](https://github.com/mu-lib/mu-jquery-widget-validation/commit/eb88410))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/mu-lib/mu-jquery-widget-validation/compare/v1.0.0...v2.0.0) (2017-05-13)
 
