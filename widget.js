@@ -1,15 +1,12 @@
-(function (modules, factory) {
-  var root = this;
+(function (root, factory) {
   if (typeof define === "function" && define.amd) {
-    define(modules, factory);
+    define(["mu-jquery-widget/widget"], factory);
   } else if (typeof module === "object" && module.exports) {
-    module.exports = factory.apply(root, modules.map(require));
+    module.exports = factory(require("mu-jquery-widget/widget"));
   } else {
-    root["mu-jquery-widget-validation/widget"] = factory.apply(root, modules.map(function (m) {
-      return root[m];
-    }));
+    root["mu-jquery-widget-validation/widget"] = factory(root["mu-jquery-widget/widget"]);
   }
-})(["mu-jquery-widget/widget"], function (widget) {
+})(this, function (widget) {
   return widget.extend({
     "on/initialize": function ($event) {
       var me = this;
@@ -20,7 +17,7 @@
         me[me[method] ? method + "$validation" : method] = $.proxy(validator[method], validator);
       });
 
-      me.validator = function() {
+      me.validator = function () {
         return validator;
       }
 

@@ -1,15 +1,12 @@
-(function (modules, factory) {
-  var root = this;
+(function (root, factory) {
   if (typeof define === "function" && define.amd) {
-    define(modules, factory);
+    define(["../widget"], factory);
   } else if (typeof module === "object" && module.exports) {
-    module.exports = factory.apply(root, modules.map(require));
+    module.exports = factory(require("../widget"));
   } else {
-    root["mu-jquery-widget-validation/examples/basic"] = factory.apply(root, modules.map(function (m) {
-      return root[m.replace(/^\.{2}/, "mu-jquery-widget-validation")];
-    }));
+    root["mu-jquery-widget-validation/examples/basic"] = factory(root["mu-jquery-widget-validation/widget"]);
   }
-})(["../widget"], function (widget) {
+})(this, function (widget) {
   return widget.extend({
     "on/submit": function ($event) {
       console.log($event);
