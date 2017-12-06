@@ -15,12 +15,12 @@
     "examples"
   ],
   "dependencies": {
-    "mu-jquery-widget": "^17.0.3",
-    "jquery-validation": "^1.16.0"
+    "mu-jquery-widget": "^17.0.4",
+    "jquery-validation": "^1.17.0"
   },
   "devDependencies": {
     "jquery": "^3.2.1",
-    "mu-jquery-app": "^21.0.0"
+    "mu-jquery-app": "^22.0.0"
   },
   "version": "2.1.1"
 }

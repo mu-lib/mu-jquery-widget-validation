@@ -18,14 +18,14 @@
   },
   "homepage": "https://github.com/mu-lib/mu-jquery-widget-validation#readme",
   "peerDependencies": {
-    "jquery-validation": "^1.16.0"
+    "jquery-validation": "^1.17.0"
   },
   "dependencies": {
-    "mu-jquery-widget": "^17.0.3"
+    "mu-jquery-widget": "^17.0.4"
   },
   "devDependencies": {
     "jquery": "^3.2.1",
-    "mu-jquery-app": "^21.0.0",
-    "standard-version": "^4.0.0"
+    "mu-jquery-app": "^22.0.0",
+    "standard-version": "^4.2.0"
   }
 }
