@@ -4,7 +4,7 @@
   } else if (typeof module === "object" && module.exports) {
     module.exports = factory(require("../widget"));
   } else {
-    root["mu-jquery-widget-validation/examples/basic"] = factory(root["mu-jquery-widget-validation/widget"]);
+    root["validation-example/widget"] = factory(root["mu-jquery-widget-validation/widget"]);
   }
 })(this, function (widget) {
   return widget.extend({
