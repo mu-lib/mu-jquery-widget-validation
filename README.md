@@ -1,7 +1,7 @@
 # µ jQuery widget for validation
 
 - [source](widget.js)
-- [tests](tests)
+- [examples](examples)
 - [changelog](CHANGELOG.md)
 
 ## Installation
